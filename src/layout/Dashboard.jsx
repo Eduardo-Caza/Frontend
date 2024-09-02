@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { FaSignOutAlt } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Dashboard.css';
-import Materias from '../pages/Materias';
-import CreateEstudiante from '../pages/CreateEstudiante'; // Importamos el formulario de estudiantes
-import CreateMatricula from '../pages/CreateMatricula'; // Importamos el formulario de matriculas
+import Clientes from '../pages/Clientes';
+import Reservas from '../pages/Reservas'; // Importamos el formulario de matriculas
+import Vehiculos from '../pages/Vehiculos';
 
 const Dashboard = () => {
     const [idUsuario, setIdUsuario] = useState(null);
@@ -58,17 +58,17 @@ const Dashboard = () => {
             <header className="dashboard-header">
                 <h1 className="header-title">SISTEMA GESTOR DE MATRICULAS</h1>
                 <nav className="header-nav">
-                    <button onClick={mostrarFormularioMateriasHandler} className="nav-link">Materias</button>
-                    <button onClick={mostrarFormularioEstudiantesHandler} className="nav-link">Estudiantes</button>
-                    <button onClick={mostrarFormularioMatriculasHandler} className="nav-link">Matriculas</button>
+                    <button onClick={mostrarFormularioMateriasHandler} className="nav-link">CLIENTES</button>
+                    <button onClick={mostrarFormularioEstudiantesHandler} className="nav-link">VEHÍCULOS</button>
+                    <button onClick={mostrarFormularioMatriculasHandler} className="nav-link">RESERVAS</button>
                 </nav>
             </header>
             <main className="dashboard-main">
                 <section className="dashboard-content">
                     <h2 className="welcome-message">Bienvenido, {nombre}</h2>
-                    {mostrarFormularioMaterias && <Materias />}
-                    {mostrarFormularioEstudiantes && <CreateEstudiante />}
-                    {mostrarFormularioMatriculas && <CreateMatricula />} {/* Mostrar el formulario de matriculas */}
+                    {mostrarFormularioMaterias && <Clientes />}
+                    {mostrarFormularioEstudiantes && <Vehiculos />}
+                    {mostrarFormularioMatriculas && <Reservas />} {/* Mostrar el formulario de matriculas */}
                 </section>
             </main>
             <button className="logout-button" onClick={handleLogout}>

@@ -23,9 +23,9 @@ export const PaginaInicial = () => {
                     </nav>
 
                     <div className="text-center">
-                        <h2>SISTEMA GESTOR DE MATRICULAS</h2>
-                        <h3>Aquí podrás encontrar tiendas con productos gamer en Quito</h3>
-                        <p>Encuentra variedad de productos y registra tu tienda para que más personas puedan encontrarte.</p>
+                        <h2>SISTEMA DE GESTIÓN DE RENDTA DE CARROS.</h2>
+                        <h3>Aquí podrás rentar un vehiculo segun tus necesidades en Quito</h3>
+                        <p>Encuentra variedad de automóviles y reserva tus tickets.</p>
                     </div>
 
                     <div className="bg-gradient">

@@ -6,18 +6,18 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import { AuthProvider } from '../context/AuthProvider.jsx'
 import Auth from './layout/Auth'
 import { PrivateRoute } from './routes/PrivateRoute.jsx'
-import Materias from './pages/Materias.jsx'
-import MateriasRegistradas from './pages/MateriasRegistradas.jsx'
-import EditarMateria from './pages/EditarMateria.jsx'
-import CreateEstudiante from './pages/CreateEstudiante.jsx';
-import ListEstudiantes from './pages/ListEstudiantes.jsx';
-import EditEstudiante from './pages/EditEstudiante.jsx';
-import DetailEstudiante from './pages/DetailEstudiante';
-import CreateMatricula from './pages/CreateMatricula.jsx';
-import DetailMatricula from './pages/DetailMatricula.jsx';
-import EditMatricula from './pages/EditMatricula.jsx';
-import ListMatriculas from './pages/ListMatriculas.jsx';
+import Clientes from './pages/Clientes.jsx';
+import EditarCliente from './pages/EditarCliente.jsx';
+import Vehiculos from './pages/Vehiculos.jsx';
+import ListVehiculos from './pages/VehiculosRegistrados.jsx';
+import EditarVehiculo from './pages/EditarVehiculo.jsx';
+import DetalleVehiculo from './pages/DetalleVehiculos.jsx';
+import Reservas from './pages/Reservas.jsx';
+import DetalleReserva from './pages/DetalleReserva.jsx';
+import EditarReserva from './pages/EditarReserva.jsx';
+import ListaReservas from './pages/ListaReservas.jsx';
 import Dashboard from './layout/Dashboard.jsx';
+import ClientesRegistrados from './pages/ClientesRegistrados.jsx'
 
 function App() {
   return (
@@ -30,17 +30,17 @@ function App() {
             <Route path='ingresar' element={<Ingresar/>}/>
             <Route path='registrar' element={<Registrar/>}/>
             <Route path='dashboard' element={<Dashboard />} />
-            <Route path='dashboard/materias' element={<Materias />} />
-            <Route path='materias-registradas' element={<MateriasRegistradas />} />
-            <Route path='editar-materia/:id' element={<EditarMateria />} />
-            <Route path="dashboard/estudiantes" element={<CreateEstudiante />} />
-            <Route path="estudiante/editar/:id" element={<EditEstudiante />} />
-            <Route path="estudiantes/detalle/:id" element={<DetailEstudiante />} />
-            <Route path="/estudiantes" element={<ListEstudiantes />} /> 
-            <Route path="dashboard/matriculas" element={<CreateMatricula />} />
-            <Route path="matricula/editar/:id" element={<EditMatricula />} />
-            <Route path="matricula/detalle/:id" element={<DetailMatricula />} />
-            <Route path="matriculas" element={<ListMatriculas />} /> 
+            <Route path='dashboard/clientes' element={<Clientes />} />
+            <Route path='clientes-registrados' element={<ClientesRegistrados />} />
+            <Route path='editar-cliente/:id' element={<EditarCliente />} />
+            <Route path="dashboard/vehiculos" element={<Vehiculos />} />
+            <Route path="vehiculo/editar/:id" element={<EditarVehiculo />} />
+            <Route path="vehiculo/detalle/:id" element={<DetalleVehiculo />} />
+            <Route path="/vehiculos" element={<ListVehiculos />} /> 
+            <Route path="dashboard/reservas" element={< Reservas />} />
+            <Route path="reserva/editar/:id" element={<EditarReserva />} />
+            <Route path="reserva/detalle/:id" element={<DetalleReserva />} />
+            <Route path="reservas" element={<ListaReservas />} /> 
         </Route>
         </Routes>
     </AuthProvider>
