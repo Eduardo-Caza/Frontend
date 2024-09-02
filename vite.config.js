@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: process.env.PORT || 3000,
-    host: true,  // Permite que el servidor escuche en 0.0.0.0
+    host: '0.0.0.0', // Asegura que se vincule a 0.0.0.0
   },
 });
